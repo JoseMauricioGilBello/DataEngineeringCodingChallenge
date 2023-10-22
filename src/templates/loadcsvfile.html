@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Section 1 Load CSV File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: green;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form {
+            border: 2px solid green;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please Upload the CSV File</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.file() }}
+        {{ form.submit() }}
+    </form>
+    <p>Remember that the file must be named departments.csv, hired_employees.csv, or jobs.csv, and it should not exceed 1000 rows.</p>
+    <p>Author: Mauricio Gil</p>
+</body>
+</html>

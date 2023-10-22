@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Section 2:SQL </title>
+        <style>
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 50%;
+            }
+    
+            table, th, td {
+                border: 3px solid black;
+            }
+    
+            th, td {
+                padding: 8px;
+                text-align: left;
+            }
+            h1 {
+            color: green;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        </style>
+    </head>
+<body>
+    <h1>Employees Hired Above the Mean of 2021</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Departamento</th>
+            <th>Empleados contratados</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.department }}</td>
+            <td>{{ row.hired }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Author: Mauricio Gil</p>    
+</body>
+</html>
